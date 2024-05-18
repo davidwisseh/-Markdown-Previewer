@@ -21,11 +21,11 @@ const Editor = () => {
       dispatch({ type: "CLOSE_MARKDOWN" });
       dispatch({
         type: "SET_HEIGHT",
-        payload: $("#editor-textarea").css("height"),
+        payload: $("#editor").css("height"),
       });
-      $("#editor-textarea").css("height", "calc(100vh - 70px)");
+      $("#editor").css("height", "calc(100vh - 70px)");
     } else {
-      $("#editor-textarea").css("height", editHeight);
+      $("#editor").css("height", editHeight);
       dispatch({ type: "OPEN_MARKDOWN" });
     }
   };
@@ -42,7 +42,7 @@ const Editor = () => {
       <Row>
         <div className="editor">
           <textarea
-            id="editor-textarea"
+            id="editor"
             onChange={send}
             value={useSelector((state) => state.text)}
           ></textarea>

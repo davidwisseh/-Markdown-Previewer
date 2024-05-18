@@ -4,7 +4,7 @@
   box-sizing: border-box;
   height: fit-content;
 }
-#editor-textarea {
+#editor {
   max-width: 600px;
   width: 100%;
   height: 100%;
